@@ -1,4 +1,4 @@
-import api
+import blogsapi
 
 if __name__ == '__main__':
-    api.app.run('localhost', port=4321)
+    blogsapi.app.run('localhost', port=4321)

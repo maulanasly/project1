@@ -1,6 +1,6 @@
 import unittest
 from flask_fixtures import FixturesMixin
-from api import db
+from blogsapi import app, db
 
 
 class UserModelTest(unittest.TestCase, FixturesMixin):
