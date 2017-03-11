@@ -1,0 +1,24 @@
+- table: user_roles
+  records:
+    -
+    -
+
+- table: users
+  records:
+    - user_id: 1
+      user_name: "admin_test_1"
+      email: "admin_test_1@gmail.com"
+      role_id: 1
+    - user_id: 2
+      user_name: "editor_test_2"
+      email: "editor_test_2@gmail.com"
+      role_id: 2
+    - user_id: 3
+      user_name: "author_test_1"
+      email: "author_test_1@gmail.com"
+      role_id: 3
+    - user_id: 4
+      user_name: "author_test_2"
+      email: "author_test_2@gmail.com"
+      role_id: 3
+
