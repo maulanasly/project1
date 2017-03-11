@@ -1,3 +1,4 @@
+from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, jsonify
 from flask_restful import Api
 from api.config import config
@@ -11,6 +12,8 @@ environment = os.getenv('APP_CONFIGURATION', 'testing')
 config_file = environment + '.cfg'
 app.config.from_object(config[environment])
 app.config.from_pyfile(config_file, silent=True)
+
+db = SQLAlchemy(app)
 
 api = Api(app)
 
