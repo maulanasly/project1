@@ -72,3 +72,11 @@ class BlogDetail(Resource):
             if blog_title.replace(' ', '-').lower() == post['id']:
                 posts = post
         return posts
+
+    def post(self):
+        """
+        Add new post
+        :return:
+        """
+
+        return "Not implemented", 503
