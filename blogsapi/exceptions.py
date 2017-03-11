@@ -27,8 +27,14 @@ class ApiException(Exception):
 
 
 class PostNotFound(ApiException):
-    description = "Post or artikel not found"
+    description = "Post or article not found"
     code = 200
+    status_code = 404
+
+
+class UserNotFound(ApiException):
+    description = "user not found"
+    code = 201
     status_code = 404
 
 
