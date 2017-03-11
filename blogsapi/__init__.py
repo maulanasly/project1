@@ -1,7 +1,8 @@
+from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, jsonify
 from flask_restful import Api
-from api.config import config
-from api.exceptions import ApiException
+from blogsapi.config import config
+from blogsapi.exceptions import ApiException
 
 import os
 
@@ -12,9 +13,11 @@ config_file = environment + '.cfg'
 app.config.from_object(config[environment])
 app.config.from_pyfile(config_file, silent=True)
 
+db = SQLAlchemy(app)
+
 api = Api(app)
 
-from api.resources.blog import BlogList, BlogDetail
+from blogsapi.resources.blog import BlogList, BlogDetail
 
 api.add_resource(BlogList, '/blog')
 api.add_resource(BlogDetail, '/blog/<string:blog_title>')
